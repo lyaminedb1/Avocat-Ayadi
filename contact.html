@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Rendez-vous — Maître Mani AYADI · Avocat Boulogne-Billancourt</title>
+  <meta name="description" content="Contactez Maître Mani AYADI, avocat à Boulogne-Billancourt. Tél : 06 22 23 52 87 · Email : ayadi.avocat@yahoo.fr · 1 Rue Carnot, 92100. Réponse rapide, disponible 6j/7.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ayadi-avocat.fr/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ─── Urgence Top Banner ─── */
+    .urgence-top {
+      background: var(--gold-dim);
+      border-bottom: 1px solid var(--gold-line);
+      padding: 14px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    .urgence-top p { font-size: .8rem; color: var(--muted); }
+    .urgence-top strong { color: var(--gold); }
+    .urgence-top a {
+      font-size: .78rem;
+      font-weight: 500;
+      color: var(--bg);
+      background: var(--gold);
+      padding: 7px 16px;
+      white-space: nowrap;
+      transition: background var(--tr);
+    }
+    .urgence-top a:hover { background: var(--gold-light); }
+
+    /* ─── Contact Layout ─── */
+    .contact-layout {
+      padding: 90px 5% 100px;
+      background: var(--bg);
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-left { position: sticky; top: 90px; }
+    .contact-left .label { display: block; margin-bottom: 14px; }
+    .contact-left h2 { margin-bottom: 24px; }
+    .contact-left p { font-size: .85rem; color: var(--muted); line-height: 1.85; margin-bottom: 36px; }
+
+    /* ─── Map ─── */
+    .map-wrap {
+      margin-top: 36px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .map-wrap iframe {
+      width: 100%;
+      height: 220px;
+      border: none;
+      filter: grayscale(0.4) contrast(1.1);
+      display: block;
+    }
+    .map-label {
+      padding: 12px 16px;
+      background: var(--bg-2);
+      font-size: .72rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ─── Form Section ─── */
+    .form-section { display: flex; flex-direction: column; gap: 0; }
+    .form-header {
+      margin-bottom: 30px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .form-header h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 8px; }
+    .form-header h3 em { color: var(--gold); font-style: italic; }
+    .form-header p { font-size: .8rem; color: var(--muted); }
+
+    /* Calendly Placeholder */
+    .calendly-placeholder {
+      background: var(--bg-2);
+      border: 1px dashed var(--gold-line);
+      padding: 36px 24px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .calendly-placeholder h4 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 8px; color: var(--white); }
+    .calendly-placeholder p { font-size: .78rem; color: var(--muted); margin-bottom: 16px; }
+    .calendly-placeholder .cp-badge {
+      display: inline-block;
+      font-size: .6rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-line);
+      padding: 4px 12px;
+    }
+
+    /* OR Divider */
+    .or-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 24px 0;
+      color: var(--muted);
+      font-size: .72rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .or-divider::before,
+    .or-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ─── Info boxes ─── */
+    .info-boxes {
+      padding: 0 5% 80px;
+      background: var(--bg);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .info-box {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      padding: 32px 28px;
+      transition: border-color var(--tr);
+    }
+    .info-box:hover { border-color: var(--gold-line); }
+    .info-box-icon { font-size: 1.8rem; margin-bottom: 14px; }
+    .info-box h4 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 10px; }
+    .info-box p { font-size: .78rem; color: var(--muted); line-height: 1.7; }
+    .info-box a { color: var(--gold); }
+    .info-box a:hover { text-decoration: underline; }
+    .info-box small { display: block; font-size: .68rem; color: var(--muted-2); margin-top: 4px; }
+
+    @media (max-width: 1024px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 60px; }
+      .contact-left { position: static; }
+      .info-boxes { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-overlay"></div>
+
+  <!-- Urgence banner -->
+  <div class="urgence-top" style="margin-top:68px">
+    <p><strong>Garde à vue ou urgence ?</strong> Maître AYADI intervient immédiatement.</p>
+    <a href="tel:+33622235287">📞 Appeler — 06 22 23 52 87</a>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Accueil</a>
+    <a href="domaines.html">Expertise</a>
+    <a href="cabinet.html">Le Cabinet</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:+33622235287" class="mobile-nav-tel">06 22 23 52 87</a>
+  </nav>
+  <header class="navbar">
+    <a href="index.html" class="nav-brand">M<span class="dot">.</span> AYADI</a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="domaines.html">Expertise</a>
+      <a href="cabinet.html">Le Cabinet</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-rdv">Prendre RDV</a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="mini-hero" style="margin-top:0">
+      <span class="label">Cabinet Maître AYADI · Boulogne-Billancourt</span>
+      <h1>Prenons <em style="font-style:italic;color:var(--gold)">rendez-vous</em></h1>
+      <p>Contactez le cabinet par téléphone, email ou formulaire — réponse rapide garantie</p>
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a><span>›</span><span>Contact</span>
+      </div>
+    </section>
+
+    <!-- CONTACT LAYOUT -->
+    <div class="contact-layout">
+
+      <!-- LEFT — Infos -->
+      <div class="contact-left reveal-left">
+        <span class="label">Nous contacter</span>
+        <div class="gold-bar"></div>
+        <h2 class="section-title">Le cabinet<br>vous <em>répond</em></h2>
+        <p>Disponible 6 jours sur 7, Maître AYADI répond rapidement à toute demande. Pour les urgences (garde à vue, comparution), appelez directement.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-lbl">Téléphone</div>
+            <div class="contact-val">
+              <a href="tel:+33622235287" style="font-size:1.05rem;color:var(--white);font-weight:500">06 22 23 52 87</a>
+              <span class="contact-sub">Disponible 6j/7 · Urgences acceptées</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-lbl">Email</div>
+            <div class="contact-val">
+              <a href="mailto:ayadi.avocat@yahoo.fr">ayadi.avocat@yahoo.fr</a>
+              <span class="contact-sub">Réponse sous 24h en jours ouvrés</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-lbl">Adresse du cabinet</div>
+            <div class="contact-val">
+              <address style="font-style:normal">
+                1 Rue Carnot<br>
+                92100 Boulogne-Billancourt<br>
+                Hauts-de-Seine
+              </address>
+              <span class="contact-sub">À proximité du métro Marcel Sembat (ligne 9)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-lbl">Horaires d'ouverture</div>
+            <div class="contact-val">
+              Lundi – Vendredi : 9h00 – 19h00<br>
+              <span class="contact-sub">Sur rendez-vous · Urgences en dehors des horaires</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">💳</div>
+          <div>
+            <div class="contact-lbl">Paiement accepté</div>
+            <div class="contact-val">Chèques · Espèces</div>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            src="https://maps.google.com/maps?q=1+Rue+Carnot+92100+Boulogne-Billancourt&z=16&output=embed"
+            title="Cabinet Maître AYADI — 1 Rue Carnot, Boulogne-Billancourt"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+          <div class="map-label">📍 1 Rue Carnot, 92100 Boulogne-Billancourt</div>
+        </div>
+      </div>
+
+      <!-- RIGHT — Form -->
+      <div class="form-section reveal-right">
+        <div class="form-header">
+          <h3>Demande de <em>rendez-vous</em></h3>
+          <p>Remplissez le formulaire ci-dessous. Maître AYADI vous recontacte rapidement pour confirmer le rendez-vous.</p>
+        </div>
+
+        <!-- Calendly placeholder — Phase 2 -->
+        <div class="calendly-placeholder">
+          <h4>📅 Réservation en ligne</h4>
+          <p>La prise de rendez-vous en ligne sera bientôt disponible.<br>En attendant, utilisez le formulaire ci-dessous ou appelez directement.</p>
+          <div class="cp-badge">Disponible prochainement</div>
+        </div>
+
+        <div class="or-divider">ou par formulaire</div>
+
+        <form class="form contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">Prénom *</label>
+              <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+            </div>
+            <div class="form-group">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="votre@email.fr">
+            </div>
+            <div class="form-group">
+              <label for="tel">Téléphone *</label>
+              <input type="tel" id="tel" name="tel" required placeholder="06 XX XX XX XX">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="domaine">Domaine concerné *</label>
+            <select id="domaine" name="domaine" required>
+              <option value="" disabled selected>Sélectionnez votre situation</option>
+              <option value="penal">Droit pénal — Garde à vue, tribunal, appel</option>
+              <option value="civil">Droit civil — Responsabilité, indemnisation</option>
+              <option value="travail">Droit du travail — Licenciement, prud'hommes</option>
+              <option value="affaires">Droit des affaires — Litiges commerciaux</option>
+              <option value="immobilier">Droit immobilier — Baux, copropriété</option>
+              <option value="urgence">Urgence — Intervention immédiate requise</option>
+              <option value="autre">Autre situation</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Décrivez votre situation *</label>
+            <textarea id="message" name="message" required placeholder="Décrivez brièvement votre situation afin que Maître AYADI puisse préparer au mieux votre premier entretien. Ces informations sont strictement confidentielles."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="disponibilites">Vos disponibilités (optionnel)</label>
+            <input type="text" id="disponibilites" name="disponibilites" placeholder="Ex : Lundi matin, Mercredi après-midi...">
+          </div>
+          <p class="form-confidential">🔒 Toutes les informations transmises sont strictement confidentielles et protégées par le secret professionnel de l'avocat, conformément aux articles 66-5 de la loi du 31 décembre 1971.</p>
+          <button type="submit" class="btn-submit">Envoyer ma demande →</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- INFO BOXES -->
+    <div class="info-boxes">
+      <div class="info-box reveal">
+        <div class="info-box-icon">⚡</div>
+        <h4>Urgence pénale</h4>
+        <p>En cas de garde à vue, vous avez le droit à un avocat dès la première heure. Appelez immédiatement : <a href="tel:+33622235287">06 22 23 52 87</a></p>
+        <small>Disponible 6j/7 pour les urgences</small>
+      </div>
+      <div class="info-box reveal" style="transition-delay:.1s">
+        <div class="info-box-icon">🤝</div>
+        <h4>Première consultation</h4>
+        <p>La première consultation permet d'analyser votre situation, d'expliquer vos droits et de définir ensemble la meilleure stratégie.</p>
+        <small>Au cabinet · 1 Rue Carnot · Boulogne-Billancourt</small>
+      </div>
+      <div class="info-box reveal" style="transition-delay:.2s">
+        <div class="info-box-icon">🔒</div>
+        <h4>Secret professionnel absolu</h4>
+        <p>Tout ce que vous communiquez à Maître AYADI est protégé par le secret professionnel de l'avocat — garanti par la loi.</p>
+        <small>Article 66-5 de la loi du 31 décembre 1971</small>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">M<span class="dot">.</span> AYADI <span style="font-family:var(--sans);font-weight:300;font-size:.85rem;color:var(--muted)">Avocat</span></div>
+        <p class="footer-tagline">Cabinet d'avocat au Barreau des Hauts-de-Seine. Droit pénal, civil, travail, affaires et immobilier à Boulogne-Billancourt.</p>
+        <a href="tel:+33622235287" class="footer-tel">06 22 23 52 87</a>
+      </div>
+      <nav class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="domaines.html">Expertise</a>
+        <a href="cabinet.html">Le Cabinet</a>
+        <a href="contact.html">Contact & RDV</a>
+      </nav>
+      <div class="footer-col footer-nap">
+        <h4>Cabinet</h4>
+        <address>
+          <p><strong style="color:var(--white)">Maître Mani AYADI</strong><br>1 Rue Carnot<br>92100 Boulogne-Billancourt<br><a href="tel:+33622235287">06 22 23 52 87</a><br><a href="mailto:ayadi.avocat@yahoo.fr">ayadi.avocat@yahoo.fr</a><br><br>Lun–Ven : 9h00 – 19h00</p>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Cabinet Maître Mani AYADI · Tous droits réservés</p>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

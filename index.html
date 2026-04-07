@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maître Mani AYADI — Avocat à Boulogne-Billancourt | Barreau des Hauts-de-Seine</title>
+  <meta name="description" content="Maître Mani AYADI, avocat au Barreau des Hauts-de-Seine (Toque N°549). Droit pénal, civil, travail, affaires et immobilier. Cabinet au 1 Rue Carnot, Boulogne-Billancourt. ☎ 06 22 23 52 87">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ayadi-avocat.fr/">
+  <meta property="og:title" content="Maître Mani AYADI — Avocat Boulogne-Billancourt">
+  <meta property="og:description" content="Avocat au Barreau des Hauts-de-Seine depuis 2012. Droit pénal, civil, travail, affaires. 1 Rue Carnot, Boulogne-Billancourt. ☎ 06 22 23 52 87">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Cabinet Maître Mani AYADI",
+    "url": "https://ayadi-avocat.fr",
+    "telephone": "+33622235287",
+    "email": "ayadi.avocat@yahoo.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Rue Carnot",
+      "addressLocality": "Boulogne-Billancourt",
+      "postalCode": "92100",
+      "addressCountry": "FR"
+    },
+    "openingHours": "Mo-Fr 09:00-19:00",
+    "areaServed": "Hauts-de-Seine, Île-de-France"
+  }
+  </script>
+  <style>
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      padding: 68px 5% 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 55% 60% at 0% 50%, rgba(201,169,110,0.07) 0%, transparent 65%),
+        radial-gradient(ellipse 35% 40% at 100% 10%, rgba(201,169,110,0.04) 0%, transparent 60%),
+        var(--bg);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-line), transparent);
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.08;
+      margin-bottom: 22px;
+    }
+    .hero-title em {
+      display: block;
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 300;
+      font-size: 0.85em;
+    }
+
+    .hero-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 440px;
+      margin-bottom: 38px;
+    }
+
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 44px; }
+
+    .hero-badges {
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hero-badge {
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-badge::before { content: '✦'; color: var(--gold); font-size: 0.45rem; flex-shrink: 0; }
+
+    /* Hero photo */
+    .hero-visual { position: relative; display: flex; justify-content: center; align-items: center; }
+    .hero-photo-wrap { position: relative; width: 100%; max-width: 400px; }
+    .hero-photo-frame {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: var(--bg-3);
+      position: relative;
+    }
+    .hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: var(--muted);
+    }
+    .photo-placeholder span { font-size: 3rem; opacity: 0.2; }
+    .photo-placeholder p { font-size: 0.72rem; letter-spacing: 0.1em; opacity: 0.5; }
+
+    /* Decorative offset border */
+    .hero-photo-frame::before {
+      content: '';
+      position: absolute;
+      top: 12px; left: 12px; right: -12px; bottom: -12px;
+      border: 1px solid var(--gold-line);
+      z-index: -1;
+    }
+
+    /* Stats box */
+    .hero-stat-box {
+      position: absolute;
+      bottom: -16px;
+      left: -28px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      padding: 18px 22px;
+      display: flex;
+      gap: 24px;
+    }
+    .hs-item .hs-num {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .hs-item .hs-lbl {
+      font-size: 0.62rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    /* Barreau tag */
+    .barreau-tag {
+      position: absolute;
+      top: 16px;
+      right: -16px;
+      background: var(--gold);
+      color: var(--bg);
+      padding: 8px 14px;
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+    }
+
+    /* ─── SECTIONS ─── */
+    .expertise-preview {
+      padding: 100px 5%;
+      background: var(--bg-2);
+    }
+    .expertise-preview .sec-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 60px;
+    }
+    .sec-header-right {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+    .expertise-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-bottom: 40px;
+    }
+
+    .cabinet-preview {
+      padding: 100px 5%;
+      background: var(--bg);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: center;
+    }
+    .cabinet-img {
+      aspect-ratio: 4/5;
+      background: var(--bg-3);
+      overflow: hidden;
+      position: relative;
+    }
+    .cabinet-img img { width: 100%; height: 100%; object-fit: cover; }
+    .cabinet-quote {
+      position: absolute;
+      bottom: 0; right: 0;
+      background: var(--gold);
+      color: var(--bg);
+      padding: 20px 24px;
+      max-width: 220px;
+    }
+    .cabinet-quote p {
+      font-family: var(--serif);
+      font-size: 0.88rem;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .cabinet-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 28px 0 36px;
+    }
+    .cabinet-fact {
+      padding: 14px 16px;
+      background: var(--bg-2);
+      border-left: 2px solid var(--gold);
+    }
+    .cabinet-fact strong {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .cabinet-fact span { font-size: 0.78rem; color: var(--muted); }
+
+    .process-section {
+      padding: 100px 5%;
+      background: var(--bg-2);
+      position: relative;
+    }
+    .process-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 5%; right: 5%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-line), transparent);
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-top: 60px;
+    }
+    .process-step-card {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      transition: border-color var(--tr);
+    }
+    .process-step-card:hover { border-color: var(--gold-line); }
+
+    .avis-section {
+      padding: 100px 5%;
+      background: var(--bg);
+    }
+    .avis-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin: 60px 0 36px;
+    }
+    .google-badge {
+      text-align: center;
+      padding: 22px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .google-badge a { color: var(--gold); border-bottom: 1px solid var(--gold-line); padding-bottom: 1px; }
+
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 110px; gap: 60px; }
+      .hero-visual { order: -1; }
+      .hero-photo-wrap { max-width: 300px; margin: 0 auto; }
+      .hero-stat-box { position: static; margin-top: 24px; }
+      .barreau-tag { display: none; }
+      .expertise-grid-3 { grid-template-columns: 1fr; }
+      .expertise-preview .sec-header { grid-template-columns: 1fr; gap: 24px; }
+      .cabinet-preview { grid-template-columns: 1fr; gap: 60px; }
+      .cabinet-facts { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .avis-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .process-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-overlay"></div>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Accueil</a>
+    <a href="domaines.html">Expertise</a>
+    <a href="cabinet.html">Le Cabinet</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:+33622235287" class="mobile-nav-tel">06 22 23 52 87</a>
+  </nav>
+
+  <header class="navbar">
+    <a href="index.html" class="nav-brand">M<span class="dot">.</span> AYADI</a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="domaines.html">Expertise</a>
+      <a href="cabinet.html">Le Cabinet</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-rdv">Prendre RDV</a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-eyebrow label">Barreau des Hauts-de-Seine · Toque N°549</div>
+        <h1 class="hero-title">
+          <em>Maître</em>
+          Mani AYADI<br>Votre Avocat à<br>Boulogne-Billancourt
+        </h1>
+        <p class="hero-desc">
+          Spécialiste en droit pénal, droit civil et droit du travail.
+          Défense rigoureuse et accompagnement personnalisé devant toutes
+          les juridictions des Hauts-de-Seine et d'Île-de-France.
+        </p>
+        <div class="hero-ctas">
+          <a href="contact.html" class="btn btn-gold">Prendre rendez-vous</a>
+          <a href="tel:+33622235287" class="btn btn-outline">📞 06 22 23 52 87</a>
+        </div>
+        <div class="hero-badges">
+          <div class="hero-badge">Barreau des Hauts-de-Seine — Boulogne-Billancourt 92</div>
+          <div class="hero-badge">13 ans d'expérience au Barreau</div>
+          <div class="hero-badge">Intervention rapide — disponible 6j/7</div>
+          <div class="hero-badge">Cour d'appel de Versailles & Paris</div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-frame">
+            <!-- Remplacer par : <img src="assets/ayadi-portrait.jpg" alt="Maître Mani AYADI, avocat à Boulogne-Billancourt"> -->
+            <div class="photo-placeholder">
+              <span>⚖</span>
+              <p>Photo de Maître AYADI</p>
+            </div>
+          </div>
+          <div class="barreau-tag">Barreau 92</div>
+          <div class="hero-stat-box">
+            <div class="hs-item">
+              <div class="hs-num">13+</div>
+              <div class="hs-lbl">Ans d'exercice</div>
+            </div>
+            <div class="hs-item">
+              <div class="hs-num">5</div>
+              <div class="hs-lbl">Domaines</div>
+            </div>
+            <div class="hs-item">
+              <div class="hs-num">92</div>
+              <div class="hs-lbl">Hauts-de-Seine</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAND -->
+    <div class="stats-band">
+      <div class="reveal">
+        <div class="stat-num"><span data-count="13">0</span>+</div>
+        <div class="stat-lbl">Années d'expérience</div>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="stat-num"><span data-count="5">0</span></div>
+        <div class="stat-lbl">Domaines d'expertise</div>
+      </div>
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="stat-num">CA</div>
+        <div class="stat-lbl">Versailles & Paris</div>
+      </div>
+      <div class="reveal" style="transition-delay:.3s">
+        <div class="stat-num">549</div>
+        <div class="stat-lbl">Toque au Barreau 92</div>
+      </div>
+    </div>
+
+    <!-- EXPERTISE PREVIEW -->
+    <section class="expertise-preview">
+      <div class="sec-header">
+        <div class="reveal">
+          <span class="label">Domaines d'intervention</span>
+          <div class="gold-bar"></div>
+          <h2 class="section-title">Une défense <em>spécialisée</em><br>pour chaque situation</h2>
+        </div>
+        <p class="sec-header-right reveal">
+          Maître AYADI intervient dans cinq grands domaines du droit,
+          avec une expertise centrale en droit pénal. Chaque dossier reçoit
+          une analyse approfondie dès la première consultation, jusqu'à l'issue de la procédure.
+        </p>
+      </div>
+      <div class="expertise-grid-3">
+        <article class="expertise-card reveal">
+          <div class="card-num">01</div>
+          <div class="card-icon">⚖️</div>
+          <h3 class="card-title">Droit Pénal</h3>
+          <p class="card-desc">De la garde à vue au tribunal correctionnel — défense à chaque étape de la procédure pénale avec réactivité et stratégie sur-mesure.</p>
+          <div class="card-tags">
+            <span class="card-tag">Garde à vue</span>
+            <span class="card-tag">Tribunal correctionnel</span>
+            <span class="card-tag">Cour d'appel</span>
+            <span class="card-tag">Instruction</span>
+          </div>
+        </article>
+        <article class="expertise-card reveal" style="transition-delay:.1s">
+          <div class="card-num">02</div>
+          <div class="card-icon">📋</div>
+          <h3 class="card-title">Droit Civil</h3>
+          <p class="card-desc">Litiges entre particuliers, responsabilité civile, indemnisation de préjudices — défense de vos intérêts dans toutes les procédures civiles.</p>
+          <div class="card-tags">
+            <span class="card-tag">Responsabilité</span>
+            <span class="card-tag">Indemnisation</span>
+            <span class="card-tag">Réparation</span>
+            <span class="card-tag">Recevabilité</span>
+          </div>
+        </article>
+        <article class="expertise-card reveal" style="transition-delay:.2s">
+          <div class="card-num">03</div>
+          <div class="card-icon">👷</div>
+          <h3 class="card-title">Droit du Travail</h3>
+          <p class="card-desc">Licenciement, harcèlement, discrimination — Maître AYADI défend vos droits devant le Conseil de prud'hommes et les juridictions compétentes.</p>
+          <div class="card-tags">
+            <span class="card-tag">Licenciement</span>
+            <span class="card-tag">Prud'hommes</span>
+            <span class="card-tag">Harcèlement</span>
+          </div>
+        </article>
+      </div>
+      <div class="reveal" style="text-align:center">
+        <a href="domaines.html" class="btn btn-outline">Voir tous les domaines →</a>
+      </div>
+    </section>
+
+    <!-- CABINET PREVIEW -->
+    <section class="cabinet-preview">
+      <div class="cabinet-img reveal-left">
+        <!-- <img src="assets/ayadi-portrait.jpg" alt="Maître Mani AYADI"> -->
+        <div class="photo-placeholder" style="height:100%">
+          <span>⚖</span>
+          <p>Photo du cabinet</p>
+        </div>
+        <div class="cabinet-quote">
+          <p>« Chaque dossier mérite la même détermination que si c'était la mienne propre cause. »</p>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <span class="label">Le Cabinet</span>
+        <div class="gold-bar"></div>
+        <h2 class="section-title">Maître <em>Mani AYADI</em>,<br>votre défenseur à Boulogne</h2>
+        <p style="font-size:.87rem;color:var(--muted);line-height:1.9;margin:20px 0 0">
+          Inscrit au Barreau des Hauts-de-Seine depuis novembre 2012, Maître Mani AYADI
+          exerce au 1 Rue Carnot, Boulogne-Billancourt. Il intervient devant les juridictions
+          de toute l'Île-de-France, notamment les Cours d'appel de Versailles et de Paris.
+        </p>
+        <div class="cabinet-facts">
+          <div class="cabinet-fact"><strong>Barreau</strong><span>Hauts-de-Seine · Toque N°549</span></div>
+          <div class="cabinet-fact"><strong>Serment</strong><span>5 novembre 2012</span></div>
+          <div class="cabinet-fact"><strong>Juridictions</strong><span>CA Versailles · CA Paris</span></div>
+          <div class="cabinet-fact"><strong>Cabinet</strong><span>1 Rue Carnot · 92100</span></div>
+        </div>
+        <a href="cabinet.html" class="btn btn-gold">Découvrir le cabinet →</a>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section">
+      <div style="text-align:center" class="reveal">
+        <span class="label">Notre approche</span>
+        <div class="gold-bar center"></div>
+        <h2 class="section-title">Comment nous vous <em>accompagnons</em></h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step-card reveal">
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Premier contact</h3>
+            <p class="step-desc">Prise de contact par téléphone ou email. Disponible 6j/7, réponse rapide pour toute urgence.</p>
+          </div>
+        </div>
+        <div class="process-step-card reveal" style="transition-delay:.1s">
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Consultation</h3>
+            <p class="step-desc">Entretien confidentiel au cabinet. Analyse complète de votre situation et de vos droits.</p>
+          </div>
+        </div>
+        <div class="process-step-card reveal" style="transition-delay:.2s">
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Stratégie</h3>
+            <p class="step-desc">Élaboration d'une défense sur-mesure, adaptée aux spécificités de votre dossier.</p>
+          </div>
+        </div>
+        <div class="process-step-card reveal" style="transition-delay:.3s">
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <h3 class="step-title">Défense & Suivi</h3>
+            <p class="step-desc">Représentation devant les juridictions et communication transparente à chaque étape.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVIS -->
+    <section class="avis-section">
+      <div style="text-align:center" class="reveal">
+        <span class="label">Avis clients</span>
+        <div class="gold-bar center"></div>
+        <h2 class="section-title">Ils nous ont <em>fait confiance</em></h2>
+      </div>
+      <div class="avis-grid">
+        <div class="testimonial-card reveal">
+          <div class="t-open-quote">"</div>
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">Maître AYADI a su défendre mes intérêts dans une affaire pénale complexe avec une maîtrise remarquable. Sa présence à chaque audience a fait la différence. Je recommande sans hésitation.</p>
+          <div class="t-author"><strong>Client anonyme</strong><span>Affaire pénale — Tribunal correctionnel</span></div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:.1s">
+          <div class="t-open-quote">"</div>
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">Très professionnel et à l'écoute. Il a géré mon dossier prud'homal avec une stratégie claire et un résultat au-delà de mes espérances. Disponible et réactif à chaque étape.</p>
+          <div class="t-author"><strong>Client anonyme</strong><span>Droit du travail — Conseil de prud'hommes</span></div>
+        </div>
+      </div>
+      <div class="google-badge reveal">
+        Bien noté sur Google · <a href="https://www.google.com/maps?q=Mani+AYADI+avocat+Boulogne-Billancourt" target="_blank" rel="noopener">Laisser un avis →</a>
+      </div>
+    </section>
+
+    <!-- URGENCE -->
+    <div class="urgence-band">
+      <span class="label">Intervention rapide</span>
+      <h2 class="section-title reveal">Votre situation nécessite une <em>réponse immédiate</em> ?</h2>
+      <p class="reveal">Maître AYADI répond en urgence — disponible pour toute situation nécessitant une intervention rapide.</p>
+      <div class="urgence-btns reveal">
+        <a href="tel:+33622235287" class="btn-call">📞 Appeler maintenant — 06 22 23 52 87</a>
+        <a href="contact.html" class="btn btn-outline">Prendre rendez-vous</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">M<span class="dot">.</span> AYADI <span style="font-family:var(--sans);font-weight:300;font-size:.85rem;color:var(--muted)">Avocat</span></div>
+        <p class="footer-tagline">Cabinet d'avocat au Barreau des Hauts-de-Seine. Droit pénal, civil, travail, affaires et immobilier à Boulogne-Billancourt.</p>
+        <a href="tel:+33622235287" class="footer-tel">06 22 23 52 87</a>
+      </div>
+      <nav class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="domaines.html">Expertise</a>
+        <a href="cabinet.html">Le Cabinet</a>
+        <a href="contact.html">Contact & RDV</a>
+      </nav>
+      <div class="footer-col footer-nap">
+        <h4>Cabinet</h4>
+        <address>
+          <p><strong style="color:var(--white)">Maître Mani AYADI</strong><br>1 Rue Carnot<br>92100 Boulogne-Billancourt<br><a href="tel:+33622235287">06 22 23 52 87</a><br><a href="mailto:ayadi.avocat@yahoo.fr">ayadi.avocat@yahoo.fr</a><br><br>Lun–Ven : 9h00 – 19h00</p>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Cabinet Maître Mani AYADI · Tous droits réservés</p>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

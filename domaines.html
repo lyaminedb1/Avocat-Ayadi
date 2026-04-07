@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domaines d'expertise — Maître Mani AYADI · Avocat Boulogne-Billancourt</title>
+  <meta name="description" content="Maître AYADI intervient en droit pénal, droit civil, droit du travail, droit des affaires et droit immobilier à Boulogne-Billancourt. Barreau des Hauts-de-Seine.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ayadi-avocat.fr/domaines.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ─── Domain Tabs ─── */
+    .domain-tabs {
+      background: var(--bg-2);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      position: sticky;
+      top: 68px;
+      z-index: 100;
+    }
+    .domain-tabs::-webkit-scrollbar { display: none; }
+    .domain-tab {
+      padding: 16px 26px;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all var(--tr);
+    }
+    .domain-tab:hover { color: var(--white); }
+    .domain-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* ─── Domain Sections ─── */
+    .domain-section {
+      padding: 90px 5%;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 140px;
+    }
+    .domain-section:nth-child(even) { background: var(--bg-2); }
+    .domain-section:nth-child(odd) { background: var(--bg); }
+    .domain-section.hidden { display: none; }
+
+    .domain-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .domain-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 20px;
+    }
+    .domain-title em { font-style: italic; color: var(--gold); }
+    .domain-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+
+    .subdomain-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .subdomain-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      font-size: 0.82rem;
+      color: var(--white);
+      transition: border-color var(--tr), background var(--tr);
+    }
+    .subdomain-item:hover { border-color: var(--gold-line); background: var(--bg-4); }
+    .subdomain-item::before { content: '→'; color: var(--gold); font-size: 0.8rem; flex-shrink: 0; }
+
+    .domain-side { display: flex; flex-direction: column; gap: 20px; }
+    .domain-box {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      padding: 28px 24px;
+    }
+    .domain-box h4 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+    .domain-box p { font-size: 0.8rem; color: var(--muted); line-height: 1.7; }
+    .domain-box .label { margin-bottom: 10px; display: block; }
+
+    /* Pénal urgent box */
+    .urgence-box {
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-line);
+      padding: 24px;
+    }
+    .urgence-box h4 { color: var(--gold); margin-bottom: 10px; font-family: var(--serif); font-size: 1rem; }
+    .urgence-box p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+
+    /* Bottom CTA */
+    .domains-cta {
+      padding: 70px 5%;
+      text-align: center;
+      background: var(--bg-2);
+    }
+    .domains-cta h2 { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 10px; }
+    .domains-cta h2 em { color: var(--gold); font-style: italic; }
+    .domains-cta p { font-size: 0.85rem; color: var(--muted); margin-bottom: 28px; }
+
+    @media (max-width: 768px) {
+      .domain-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-overlay"></div>
+  <nav class="mobile-nav">
+    <a href="index.html">Accueil</a>
+    <a href="domaines.html">Expertise</a>
+    <a href="cabinet.html">Le Cabinet</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:+33622235287" class="mobile-nav-tel">06 22 23 52 87</a>
+  </nav>
+  <header class="navbar">
+    <a href="index.html" class="nav-brand">M<span class="dot">.</span> AYADI</a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="domaines.html">Expertise</a>
+      <a href="cabinet.html">Le Cabinet</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-rdv">Prendre RDV</a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="mini-hero">
+      <span class="label">Cabinet Maître AYADI</span>
+      <h1>Domaines d'<em style="font-style:italic;color:var(--gold)">expertise</em></h1>
+      <p>Une défense spécialisée dans cinq domaines du droit — Boulogne-Billancourt & Île-de-France</p>
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a><span>›</span><span>Domaines d'expertise</span>
+      </div>
+    </section>
+
+    <!-- Sticky Tabs -->
+    <div class="domain-tabs" role="tablist">
+      <button class="domain-tab active" data-domain="penal" role="tab">⚖️ Droit Pénal</button>
+      <button class="domain-tab" data-domain="civil" role="tab">📋 Droit Civil</button>
+      <button class="domain-tab" data-domain="travail" role="tab">👷 Droit du Travail</button>
+      <button class="domain-tab" data-domain="affaires" role="tab">🏢 Droit des Affaires</button>
+      <button class="domain-tab" data-domain="immobilier" role="tab">🏠 Droit Immobilier</button>
+    </div>
+
+    <!-- ══ DROIT PÉNAL ══ -->
+    <section class="domain-section" id="penal" data-domain="penal" aria-labelledby="penal-title">
+      <div class="domain-grid">
+        <div>
+          <span class="label">01 — Domaine principal</span>
+          <div class="gold-bar"></div>
+          <h2 class="domain-title" id="penal-title">Droit <em>Pénal</em></h2>
+          <p class="domain-desc">
+            Le droit pénal est le cœur de l'activité de Maître AYADI. Inscrit au Barreau des
+            Hauts-de-Seine depuis 2012, il intervient à toutes les étapes de la procédure pénale :
+            dès la garde à vue, lors de l'instruction, devant le tribunal correctionnel, et en appel
+            devant la Cour d'appel de Versailles ou de Paris.
+            <br><br>
+            Sa connaissance des juridictions du département 92 et de toute l'Île-de-France lui permet
+            d'élaborer des stratégies de défense adaptées à chaque dossier, qu'il s'agisse d'une
+            comparution immédiate ou d'une affaire complexe.
+          </p>
+          <div class="subdomain-list">
+            <div class="subdomain-item">Garde à vue — assistance immédiate et défense dès la première heure</div>
+            <div class="subdomain-item">Comparution immédiate — défense urgente devant le tribunal correctionnel</div>
+            <div class="subdomain-item">Instruction — suivi des actes d'enquête, contestation des mesures</div>
+            <div class="subdomain-item">Tribunal correctionnel — plaidoiries et représentation</div>
+            <div class="subdomain-item">Cour d'appel de Versailles — appels en matière correctionnelle</div>
+            <div class="subdomain-item">Cour d'appel de Paris — représentation devant la chambre pénale</div>
+            <div class="subdomain-item">Mise en examen — assistance et stratégie de défense</div>
+            <div class="subdomain-item">Liberté sous contrôle judiciaire — demandes de mainlevée</div>
+          </div>
+          <a href="contact.html" class="btn btn-gold">Consulter Maître AYADI</a>
+        </div>
+        <div class="domain-side">
+          <div class="urgence-box reveal">
+            <h4>🚨 Garde à vue ?</h4>
+            <p>En cas de garde à vue, vous avez le droit d'être assisté par un avocat dès la première heure. Appelez immédiatement le cabinet.</p>
+            <a href="tel:+33622235287" class="btn btn-gold" style="font-size:.68rem;padding:10px 18px">📞 06 22 23 52 87</a>
+          </div>
+          <div class="domain-box reveal">
+            <span class="label">Juridictions pratiquées</span>
+            <h4>Hauts-de-Seine & Île-de-France</h4>
+            <p>Tribunal judiciaire de Nanterre · Cour d'appel de Versailles · Cour d'appel de Paris · Toutes les juridictions d'Île-de-France</p>
+          </div>
+          <div class="domain-box reveal">
+            <span class="label">Mots-clés dossiers traités</span>
+            <h4>Domaines récurrents</h4>
+            <p>Préjudice · Réparation · Recevabilité · Requête · Contrat · Qualification — selon les affaires plaidées en appel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ DROIT CIVIL ══ -->
+    <section class="domain-section" id="civil" data-domain="civil" aria-labelledby="civil-title">
+      <div class="domain-grid">
+        <div>
+          <span class="label">02 — Droit privé</span>
+          <div class="gold-bar"></div>
+          <h2 class="domain-title" id="civil-title">Droit <em>Civil</em></h2>
+          <p class="domain-desc">
+            Le droit civil couvre l'ensemble des litiges entre personnes privées. Maître AYADI
+            défend vos intérêts dans les affaires de responsabilité civile, d'indemnisation
+            de préjudices, et de contentieux divers entre particuliers ou entreprises.
+            <br><br>
+            Fort de son expérience devant les Cours d'appel de Versailles et de Paris,
+            il maîtrise les procédures civiles et les stratégies d'indemnisation maximale.
+          </p>
+          <div class="subdomain-list">
+            <div class="subdomain-item">Responsabilité civile — faute, dommage, lien de causalité</div>
+            <div class="subdomain-item">Indemnisation de préjudices — corporels, matériels, moraux</div>
+            <div class="subdomain-item">Contentieux entre particuliers — litiges, recouvrement</div>
+            <div class="subdomain-item">Contestation de décisions — recevabilité, appel</div>
+            <div class="subdomain-item">Requêtes et référés — procédures d'urgence civile</div>
+            <div class="subdomain-item">Exécution de jugements — saisies, mesures conservatoires</div>
+          </div>
+          <a href="contact.html" class="btn btn-gold">Consulter Maître AYADI</a>
+        </div>
+        <div class="domain-side">
+          <div class="domain-box reveal">
+            <span class="label">Votre situation</span>
+            <h4>Victime d'un préjudice ?</h4>
+            <p>Qu'il soit corporel, matériel ou moral, Maître AYADI évalue votre préjudice et vous accompagne pour obtenir la réparation à laquelle vous avez droit.</p>
+          </div>
+          <div class="domain-box reveal">
+            <span class="label">Conseil pratique</span>
+            <h4>Consultez rapidement</h4>
+            <p>En matière civile, les délais de prescription sont stricts. Plus vous consultez tôt, plus les options stratégiques sont nombreuses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ DROIT DU TRAVAIL ══ -->
+    <section class="domain-section" id="travail" data-domain="travail" aria-labelledby="travail-title">
+      <div class="domain-grid">
+        <div>
+          <span class="label">03 — Relations sociales</span>
+          <div class="gold-bar"></div>
+          <h2 class="domain-title" id="travail-title">Droit du <em>Travail</em></h2>
+          <p class="domain-desc">
+            Le droit du travail régit les relations entre employeurs et salariés. Maître AYADI
+            intervient aussi bien du côté des salariés que des employeurs, pour défendre leurs
+            droits devant le Conseil de prud'hommes et les juridictions sociales compétentes
+            en Hauts-de-Seine et dans toute l'Île-de-France.
+          </p>
+          <div class="subdomain-list">
+            <div class="subdomain-item">Licenciement abusif — contestation, indemnisation</div>
+            <div class="subdomain-item">Rupture conventionnelle — négociation et homologation</div>
+            <div class="subdomain-item">Harcèlement moral ou sexuel — procédure et défense</div>
+            <div class="subdomain-item">Discrimination — sexe, âge, origine, état de santé</div>
+            <div class="subdomain-item">Contentieux prud'homal — représentation et plaidoirie</div>
+            <div class="subdomain-item">Clause de non-concurrence — validité et exécution</div>
+            <div class="subdomain-item">Droit pénal du travail — travail dissimulé, accident</div>
+          </div>
+          <a href="contact.html" class="btn btn-gold">Consulter Maître AYADI</a>
+        </div>
+        <div class="domain-side">
+          <div class="domain-box reveal">
+            <span class="label">Salariés & Employeurs</span>
+            <h4>Défense des deux côtés</h4>
+            <p>Maître AYADI accompagne aussi bien les salariés victimes de licenciement abusif que les employeurs confrontés à des contentieux prud'homaux.</p>
+          </div>
+          <div class="domain-box reveal">
+            <span class="label">Délai important</span>
+            <h4>Agissez dans les délais</h4>
+            <p>En droit du travail, les délais pour contester sont courts (12 mois pour un licenciement). Ne tardez pas à consulter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ DROIT DES AFFAIRES ══ -->
+    <section class="domain-section" id="affaires" data-domain="affaires" aria-labelledby="affaires-title">
+      <div class="domain-grid">
+        <div>
+          <span class="label">04 — Entreprises</span>
+          <div class="gold-bar"></div>
+          <h2 class="domain-title" id="affaires-title">Droit des <em>Affaires</em></h2>
+          <p class="domain-desc">
+            Le droit des affaires accompagne les entreprises et entrepreneurs dans leurs
+            contentieux commerciaux et dans la gestion de leur risque pénal. Maître AYADI
+            apporte un conseil stratégique en amont et une défense efficace lorsqu'un
+            litige survient.
+          </p>
+          <div class="subdomain-list">
+            <div class="subdomain-item">Litiges commerciaux — entre sociétés, sous-traitance</div>
+            <div class="subdomain-item">Droit pénal des affaires — escroquerie, abus de biens sociaux</div>
+            <div class="subdomain-item">Contentieux contractuels — inexécution, résiliation</div>
+            <div class="subdomain-item">Recouvrement de créances — procédures d'injonction</div>
+            <div class="subdomain-item">Responsabilité des dirigeants — civil et pénal</div>
+            <div class="subdomain-item">Fraude et corruption — défense et représentation</div>
+          </div>
+          <a href="contact.html" class="btn btn-gold">Consulter Maître AYADI</a>
+        </div>
+        <div class="domain-side">
+          <div class="domain-box reveal">
+            <span class="label">Risque pénal</span>
+            <h4>Anticipez les risques</h4>
+            <p>Maître AYADI conseille les entreprises en amont pour identifier et réduire leur exposition au risque pénal avant qu'un problème ne survienne.</p>
+          </div>
+          <div class="domain-box reveal">
+            <span class="label">Urgence entreprise</span>
+            <h4>Réactivité garantie</h4>
+            <p>En matière commerciale, chaque jour compte. Le cabinet répond rapidement pour évaluer votre situation et définir une stratégie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ DROIT IMMOBILIER ══ -->
+    <section class="domain-section" id="immobilier" data-domain="immobilier" aria-labelledby="immobilier-title">
+      <div class="domain-grid">
+        <div>
+          <span class="label">05 — Immobilier</span>
+          <div class="gold-bar"></div>
+          <h2 class="domain-title" id="immobilier-title">Droit <em>Immobilier</em></h2>
+          <p class="domain-desc">
+            Le droit immobilier couvre tous les litiges liés à la propriété, aux baux et
+            à la copropriété. Maître AYADI défend aussi bien les propriétaires que les
+            locataires, et intervient dans tous les contentieux immobiliers en Hauts-de-Seine
+            et en Île-de-France.
+          </p>
+          <div class="subdomain-list">
+            <div class="subdomain-item">Baux d'habitation — non-paiement, résiliation, expulsion</div>
+            <div class="subdomain-item">Baux commerciaux — renouvellement, résiliation, indemnités</div>
+            <div class="subdomain-item">Troubles de voisinage — nuisances, empiètements</div>
+            <div class="subdomain-item">Litiges de copropriété — charges, assemblées, travaux</div>
+            <div class="subdomain-item">Contentieux de la construction — malfaçons, garanties</div>
+            <div class="subdomain-item">Expulsion locative — procédure et représentation</div>
+            <div class="subdomain-item">Saisies immobilières — défense du débiteur</div>
+          </div>
+          <a href="contact.html" class="btn btn-gold">Consulter Maître AYADI</a>
+        </div>
+        <div class="domain-side">
+          <div class="domain-box reveal">
+            <span class="label">Propriétaires & Locataires</span>
+            <h4>Défense des deux côtés</h4>
+            <p>Que vous soyez propriétaire face à un impayé ou locataire confronté à une expulsion, Maître AYADI défend vos intérêts avec la même rigueur.</p>
+          </div>
+          <div class="domain-box reveal">
+            <span class="label">Secteur 92</span>
+            <h4>Connaissance locale</h4>
+            <p>Le marché immobilier des Hauts-de-Seine est spécifique. Maître AYADI maîtrise les pratiques locales et les juridictions compétentes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="domains-cta">
+      <h2>Votre situation ne rentre dans <em>aucune case</em> ?</h2>
+      <p>Contactez le cabinet directement — Maître AYADI analyse chaque situation personnellement.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-gold">Prendre rendez-vous</a>
+        <a href="tel:+33622235287" class="btn btn-outline">📞 06 22 23 52 87</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">M<span class="dot">.</span> AYADI <span style="font-family:var(--sans);font-weight:300;font-size:.85rem;color:var(--muted)">Avocat</span></div>
+        <p class="footer-tagline">Cabinet d'avocat au Barreau des Hauts-de-Seine. Droit pénal, civil, travail, affaires et immobilier à Boulogne-Billancourt.</p>
+        <a href="tel:+33622235287" class="footer-tel">06 22 23 52 87</a>
+      </div>
+      <nav class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="domaines.html">Expertise</a>
+        <a href="cabinet.html">Le Cabinet</a>
+        <a href="contact.html">Contact & RDV</a>
+      </nav>
+      <div class="footer-col footer-nap">
+        <h4>Cabinet</h4>
+        <address>
+          <p><strong style="color:var(--white)">Maître Mani AYADI</strong><br>1 Rue Carnot<br>92100 Boulogne-Billancourt<br><a href="tel:+33622235287">06 22 23 52 87</a><br><a href="mailto:ayadi.avocat@yahoo.fr">ayadi.avocat@yahoo.fr</a><br><br>Lun–Ven : 9h00 – 19h00</p>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Cabinet Maître Mani AYADI · Tous droits réservés</p>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
